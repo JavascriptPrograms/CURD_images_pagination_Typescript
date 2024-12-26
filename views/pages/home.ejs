@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-5">
+            <h2 class="text-center">Search Student Details</h2>
+            <form method="post" action="/search_student">
+                <div class="form-group mb-3">
+                    <label for="roll_number">Roll Number:</label>
+                    <input type="text" class="form-control" id="roll_number" name="roll_number" placeholder="Enter the Roll Number" required>
+                </div>
+                <div class=" mb-3">
+                    <button type="submit" class="btn btn-primary w-100">Search</button>
+                </div>
+            </form>
+
+            <%try{%>
+                <%- include('../pages/result') %>
+            <%}catch(err){%>
+                <p><%= err.ReferenceError %></p>
+            <%}%>
+           
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>

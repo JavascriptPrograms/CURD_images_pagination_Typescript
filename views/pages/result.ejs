@@ -1,0 +1,31 @@
+<section>
+    <div class="container-fluid">
+        <% if (student && student.length > 0) { %>
+        <% student.forEach((item)=>{%>
+            <% if(item){%>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"><%= item.first_name%> <%= item.last_name %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= item.roll_number  %></h6>
+                </div>
+                <div class="card-body">
+                    <p class="float-start">
+                        <strong>First Name:</strong> <%= item.first_name%><br>
+                        <strong>Last Name:</strong> <%= item.last_name %><br>
+                        <strong>Email:</strong> <%= item.email %><br>
+                        <strong>Phone Number:</strong> <%= item.phone_number %><br>
+                    </p>
+                    <p class="">
+                        <!-- <strong>Student Picture:</strong> -->
+                        <img src="/uploads/<%= item.student_pic %>" alt="Student Picture" class="img-thumbnail">
+                    </p>
+                </div>
+            </div>
+            <%}else{%>
+                <h2>No  Found</h2>
+            <% } %>
+        <%}) %>
+        <% } else { %>
+            <h5 class="text-danger text-center">No students found.</h5>
+          <% } %>
+</section>
