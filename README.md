@@ -85,6 +85,30 @@ Update package.json to include a development script with Nodemon:
     "dev": "nodemon --exec ts-node src/app.ts"
   }
 }
+# 9. Input Field transfor to the server with add EJS template engine
+install the package for node js
+npm install body-parser ejs
+add the middleware for body-parser configure :
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+add the middleware for EJS Cnfig:
+
+app.set('view engine','ejs');
+
+# 10. flash message with session of the express js 
+npm install express-flash express-session
+npm install --save--dev @types/express-flash @types/express-session
+config the middleware in project:
+app.use(flash())
+
+app.use(session({
+    cookie:{maxAge:2000},
+    secret:'secret',
+    resave:false,
+    saveUninitialized: true,
+}));
 
 Now, use npm run dev to start the development server with live reload.
 
