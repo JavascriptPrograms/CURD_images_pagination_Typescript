@@ -85,7 +85,7 @@ Update package.json to include a development script with Nodemon:
     "dev": "nodemon --exec ts-node src/app.ts"
   }
 }
-# 9. Input Field transfor to the server with add EJS template engine
+# 9. Input Field transfer to the server with add EJS template engine
 install the package for node js
 npm install body-parser ejs
 add the middleware for body-parser configure :
