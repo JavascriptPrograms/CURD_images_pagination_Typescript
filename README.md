@@ -55,7 +55,7 @@ Copy code
 node dist/app.js
 # 7. Use ts-node for Development (Optional)
 To avoid manually compiling TypeScript each time, you can use ts-node for development:
-npm install --save-dev ts-node
+npm install --save-dev ts-node @types/multer
 npm install multer mysql2 
 Then, modify your package.json scripts:
 
